@@ -1,4 +1,5 @@
 - [Головна](main.md)
-- [Серверна платформа]()
-  - [Сервіси](server-platform/services.md)
-  - [Агенти](server-platform/agents.md)
+- [Серверна платформа](server-platform/server-platform.md)
+    - [Ініціалізація та запуск](server-platform/init-platform.md)
+    - [Сервіси](server-platform/services.md)
+    - [Агенти](server-platform/agents.md)
