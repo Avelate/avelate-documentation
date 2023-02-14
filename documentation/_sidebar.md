@@ -1,0 +1,4 @@
+- [Головна](main.md)
+- [Серверна платформа]()
+  - [Сервіси](server-platform/services.md)
+  - [Агенти](server-platform/agents.md)
