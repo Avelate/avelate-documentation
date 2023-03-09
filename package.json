@@ -15,11 +15,17 @@
     "type": "git",
     "url": "git+https://github.com/Avelate/avelate-documentation.git"
   },
-  "keywords": ["avelate-enterprise-server", "avelate-enterprise-web-client"],
+  "keywords": [
+    "avelate-enterprise-server",
+    "avelate-enterprise-web-client"
+  ],
   "author": "Vladyslav Pestsov <pestsov.js@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Avelate/avelate-documentation/issues"
   },
-  "homepage": "https://github.com/Avelate/avelate-documentation#readme"
+  "homepage": "https://github.com/Avelate/avelate-documentation#readme",
+  "dependencies": {
+    "docsify-mermaid": "^1.0.0"
+  }
 }
