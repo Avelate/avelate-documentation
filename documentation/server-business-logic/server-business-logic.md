@@ -833,4 +833,21 @@ type CustomEvent<T> = {
 
 ### Приклад
 
+# cache
+
+Сервіс кешування призначений для створення, обробки, валідації та видалення кешу.
+
+<hr/>
+
+## Зміст
+- methods:
+    - [cache.put]
+    - [cache.get]
+    - [cache.update]
+    - [cache.delete]
+    - [cache.validate]
+    - [cache.revalidate]
+    - [cache.checkResource]
+    - [cache.checkData]
+    - [cache.clear]
 
