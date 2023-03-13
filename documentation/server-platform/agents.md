@@ -1,14 +1,14 @@
 ## Загальний опис {docsify-ignore}
 
-Платформа представляє собою живий організм, який змінюється та розвивається,
+Платформа являє собою живий організм, який змінюється та розвивається,
 а реалізовані застосунки, які працюють в робочому середовищі та потребують
-підтримки напроти – потребують стабільності в своєму розвитку. <br/><br/>
+підтримки напроти – потребують стабільності, у своєму розвитку. <br/><br/>
 З часом кількість застосунків які працюють в робочому середовищі постійно збільшується, це означає, що зміни,
 які рушать минулі контракти між ядром та сервером – можуть порушити роботу не одного десятка застосунків,
-які потребують підтримки, та кожний в свій час повинен бути перейти на нову версії серверної платформи.
-З ціллю недопускання таких порушень створюється проміжний інтерфейс між ядром та бізнес-логікою. <br/> <br/>
+які потребують підтримки, та кожен, у свій час повинен бути перейти на нову версії серверної платформи.
+З метою недопускання таких порушень створюється проміжний інтерфейс між ядром та бізнес-логікою. <br/> <br/>
 
-Так, кожний застосунок має лише дві залежності:
+Кожен застосунок має лише дві залежності:
 -	відповідні агенти – проміжні інтерфейси, які надають функціонал ядра.
 -	типи, які описують контракти – надаються через один файл з типізацією.
 
@@ -28,33 +28,33 @@
     Vendor[Vendor] --> as[(Business Logic)]
 ```
 
-Кожен агент надає абстрактний функціонал згідно його назви та призначення:
-- Агент бізнес логіки `BusinessLogicAgent` - надає функціонал сервісів та провайдерів.
+Кожен агент надає абстрактний функціонал згідно з назвою цього функціонала та призначення:
+- Агент бізнес-логіки `BusinessLogicAgent` - надає функціонал сервісів та провайдерів.
 - Агент інтеграцій `IntegrationAgent` - надає функціонал взаємодії з зовнішніми системами, підсистемами чи сервісами.
 - Агент базових операцій `BaseOperationAgent` - надає функціонал базових операцій.
 - Агент наслідування `InheritanceAgent` - надає класи (не екземпляри) для можливості наслідування від них документів колекцій.
 
 > [!NOTE]
-> Кожен агент налічує гетери, які описують собою належність тому чи іншому сервісу, інтеграції та ін. Таким чином при використані агентів в документах бізнес-логіки
+> Кожен агент налічує гетери, які описують собою належність тому чи іншому сервісу, інтеграції та ін. Таким чином при використанні агентів в документах бізнес-логіки
 є чітке розуміння до якої абстракції відноситься той чи інший функціонал.
 
 ## Агент бізнес-логіки
 
 Агент бізнес-логіки `BusinessLogicAgent` надає функціонал сервісів та провайдерів. 
-Агент має додаткові абстракцію в вигляді гетеру, який має назву відповідного сервісу чи 
+Агент має додаткові абстракцію в вигляді геттеру, який має назву відповідного сервісу чи 
 провайдера, що спрощує розуміння приналежності конкретного методу до конкретної сутності ядра.
 
 ```typescript
 @injectable()
 class BusinessLogicAgent implements IBusinessLogicAgent {
-
     constructor(
         @inject(CoreSymbols.ErrorProvider) private errorProvider: IErrorProvider,
         @inject(CoreSymbols.LoggerService) private loggerService: ILoggerService,
 
         @inject(CoreSymbols.DatabaseProvider) private dbProvider: IDatabaseProvider,
-        @inject(CoreSymbols.MailerProvider) private mailerProvider: IMailerProvider
-        ...
+        @inject(CoreSymbols.MailerProvider) private mailerProvider: IMailerProvider,
+        
+        // ...
     ) {}
 
     public get tokenizerProvider() {
@@ -78,7 +78,7 @@ class BusinessLogicAgent implements IBusinessLogicAgent {
         }
     }
     
-    ...
+    // ...
 }
 
 export default BusinessLogicAgent
@@ -86,11 +86,11 @@ export default BusinessLogicAgent
 
 Агент надає системний функціонал, що в 90% випадків використовується для створення схем валідації,
 проміжних та основних обробників, документації API конкретної колекції, 
-а також при потребі додавання готових проміжних чи основних обробників при створені маршрутизації, 
+а також при потребі додавання готових проміжних чи основних обробників при створенні маршрутизації, 
 наприклад обробник базової реєстрації через логін або пароль.
 
 
-**Повна схема просування функціоналу сервісів та провайдерів до відповідного документу будь-якої коллекції:**
+**Повна схема просування функціонала сервісів та провайдерів до відповідного документу будь-якої колекції:**
 
 ```mermaid
     flowchart LR
@@ -127,15 +127,15 @@ export default BusinessLogicAgent
     
     BaAgent(((BusinessLogicAgent))) ==> as[(CoreVendor.ts)]
     as[(CoreVendor.ts)] -.-> collController["[collection-name].controller.ts"]
-    as[(CoreVendor.ts)] -.-> collvalidator["[collection-name].validator.ts"]
-    as[(CoreVendor.ts)] -.-> collmiddleware["[collection-name].middleware.ts"]
-    as[(CoreVendor.ts)] -.-> colldocumenter["[collection-name].documenter.ts"]
+    as[(CoreVendor.ts)] -.-> collValidator["[collection-name].validator.ts"]
+    as[(CoreVendor.ts)] -.-> collMiddleware["[collection-name].middleware.ts"]
+    as[(CoreVendor.ts)] -.-> collDocument["[collection-name].documentor.ts"]
     
     subgraph "[Collection]"
      collController["[collection-name].controller.ts"]
-     collvalidator["[collection-name].validator.ts"]
-     collmiddleware["[collection-name].middleware.ts"]
-     colldocumenter["[collection-name].documenter.ts"]
+     collValidator["[collection-name].validator.ts"]
+     collMiddleware["[collection-name].middleware.ts"]
+     collDocument["[collection-name].documentor.ts"]
     end
 ```
 
