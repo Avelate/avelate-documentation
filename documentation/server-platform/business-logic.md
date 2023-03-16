@@ -197,3 +197,45 @@ class NinjaSushiApplication extends AbstractApplication implements IAbstractAppl
 > [!NOTE]
 > Бізнес-логіка підтримує реєстрацію однієї і ті є ж колекції в різних застосунків, що суттєво зменшує кількість написання кодової бази.
 
+
+
+### Перелік документів 
+
+| Назва | Позначення | Опис | 
+| :---: | :--------: | :--- | 
+| [Колекціонер](#контролер) | `[collection-name].collector.ts` | Реєстрація всіх документів колекції | 
+| Контролер | `[collection-name].controller.ts` | Опис основних обробників маршрутів | 
+| Проміжний обробник | `[collection-name].middleware.ts` | Опис проміжних обробників маршрутів | 
+| Маршрути | `[collection-name].router.path.ts` | Перелік машрутів | 
+| Маршрутизатор | `[collection-name].router.ts` | Реєстрація маршрутів та їх обробників | 
+| `Swagger` документатор | `[collection-name].swagger.ts` | Опис `http` запитів в `Swagger` документації | 
+| `AsyncApi` документатор | `[collection-name].asyncapi.ts` | Опис `websocket` подій в `AsyncApi` документації | 
+| Валідатор | `[collection-name].validator.ts` | Опис схем валідацій обробників | 
+| Словник мови | `[collection-name].i10n.[language.name].ts` | Опис фраз мови колеції | 
+| Схема сутності | `[collection-name].entity.ts` | Схема сутності таблиці в базі даних | 
+| Репозиторій | `[collection-name].repository.ts` | Репозиторій колекції | 
+| Помічник | `[collection-name].helper.ts` | Опис допоміжних обробників | 
+| Виконувач | `[collection-name].executor.ts` | Опис запланованих обробників | 
+
+
+## Контролер
+
+## Проміжний обробник
+
+## Маршрути
+
+## Маршрутизатор
+
+## Swagger документатор
+
+## AsyncApi документатор
+
+## Валідатор
+
+## Схема сутності
+
+## Репозиторій
+
+## Помічник
+
+## Робітник
