@@ -13,47 +13,47 @@ Cтруктура ядра:
 |     ├── abstract.application.ts 
 |     ├── abstract.collector.ts 
 |     ├── abstract.controller.ts 
-|     ├── abstract.[document-type].ts 
+|     ├── abstract.{{document-type}}.ts 
 ├── adapters
 |     ├── frameworks 
 |     |    ├── abstract.framework.adapter.ts 
 |     |    ├── express.framework.adapter.ts 
 |     |    ├── fastify.framework.adapter.ts 
-|     |    ├── [framework-name].framework.adapter.ts 
+|     |    ├── {{framework-name}}.framework.adapter.ts 
 |     ├── protocols 
 |     |    ├── abstract.protocol.adapter.ts 
 |     |    ├── http.protocol.adapter.ts 
 |     |    ├── web-socket.protocol.adapter.ts 
-|     |    ├── [protocol-name].protocol.adapter.ts 
+|     |    ├── {{protocol-name}}.protocol.adapter.ts 
 ├── agents
 |     ├── base-operation.agent.ts 
 |     ├── business-logic.agent.ts 
 |     ├── integration.agent.ts 
-|     ├── [agent-name].agent.ts 
+|     ├── {{agent-name}}.agent.ts 
 ├── base-operations
 |     ├── base.swagger.ts 
-|     ├── [operation-name].[document-type].ts 
+|     ├── {{operation-name}}.[document-type].ts 
 ├── common
 |     ├── color.common.ts 
 |     ├── emoji.common.ts 
 |     ├── http-code.common.ts 
-|     ├── [common-name].common.ts 
+|     ├── {{common-name}}.common.ts 
 ├── connections
 |     ├── abstract.connection.ts 
 |     ├── database.connection.ts 
 |     ├── server.connection.ts 
-|     ├── [element-name].connection.ts 
+|     ├── {{element-name}}.connection.ts 
 ├── factories
 |     ├── abstract.factory.ts 
 |     ├── database.factory.ts 
 |     ├── framework.factory.ts 
 |     ├── transport.factory.ts 
-|     ├── [factory-name].factory.ts 
+|     ├── {{factory-name}}.factory.ts 
 ├── integrations
 |     ├── abstract.integration.ts 
 |     ├── firebase.integration.ts 
 |     ├── telegram.integration.ts 
-|     ├── [integration.name].integration.ts 
+|     ├── {{integration.name}}.integration.ts 
 ├── ioc
 |     ├── ioc.core.symbols.ts 
 |     ├── ioc.core.ts 
@@ -62,37 +62,37 @@ Cтруктура ядра:
 |     ├── asyncapi.loader.ts 
 |     ├── swagger.loader.ts 
 |     ├── schema.loader.ts 
-|     ├── [loader-name].loader.ts 
+|     ├── {{oader-name}}.loader.ts 
 ├── managers
 |     ├── core.manager.ts 
 |     ├── business.manager.ts 
-|     ├── [manager-name].manager.ts 
+|     ├── {{manager-name}}.manager.ts 
 ├── providers
 |     ├── error.provider.ts 
 |     ├── i10n.provider.ts 
 |     ├── mail.provider.ts 
-|     ├── [provider-name].provider.ts 
+|     ├── {{provider-name}}.provider.ts 
 ├── services
 |     ├── abstract.service.ts 
 |     ├── configuration.service.ts 
 |     ├── factory.service.ts 
 |     ├── logger.service.ts 
-|     ├── [service.name].service.ts 
+|     ├── {{service.name}}.service.ts 
 ├── strategies
 |     ├── authorizations 
 |     |     ├── abstract.auth.strategy.ts 
 |     |     ├── twitter.auth.strategy.ts 
 |     |     ├── facebook.auth.strategy.ts 
 |     |     ├── github.auth.strategy.ts 
-|     |     ├── [auth-strategy-name].auth.strategy.ts 
+|     |     ├── {{auth-strategy-name}}.auth.strategy.ts 
 |     ├── cloud-storages 
 |     |     ├── abstract.cloud-storage.strategy.ts 
 |     |     ├── s3.cloud-storage.strategy.ts 
-|     |     ├── [cloud-storage-strategy-name].cloud-storage.strategy.ts 
+|     |     ├── {{cloud-storage-strategy-name}}.cloud-storage.strategy.ts 
 |     ├── payments 
 |     |     ├── abstract.payment.strategy.ts 
 |     |     ├── stripe.payment.strategy.ts 
-|     |     ├── [payment-type].payment.strategy.ts 
+|     |     ├── {{payment-type}}.payment.strategy.ts 
 |     ├── deliveries 
 |     |     ├── abstract.delivery.strategy.ts 
 |     |     ├── nova-poshta.delivery.strategy.ts 

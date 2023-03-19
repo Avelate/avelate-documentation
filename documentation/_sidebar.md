@@ -9,6 +9,7 @@
   - [Серверна платформа](server-platform/server-platform.md)
     - [Загальний опис](server-platform/common-description.md)
     - [Ініціалізація та запуск](server-platform/init-platform.md)
+    - [abstract documents](server-platform/abstract-documents.md)
     - [Елементи системи](server-platform/server-elements.md)
     - [Фабрики елементів системи](server-platform/factories.md)
     - [Сервіси](server-platform/services.md)
