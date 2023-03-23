@@ -34,3 +34,44 @@
 | `asyncapi` | - агент базових операцій `base operations`. |
 | `validator` | - агент бізнес-логіки `business logic agent`. <br/> - агент базових операцій `base operations`. |
 
+## Application list
+
+## Application
+
+## Collector 
+
+![Abstraact collector](./diagrams/AbstractDocuments/AbstractCollector.png)
+
+## Router
+
+![Abstract Router](./diagrams/AbstractDocuments/AbstractRouter.png)
+
+## Controller
+
+![Abstract Controller](./diagrams/AbstractDocuments/AbstractController.png)
+
+## Middleware
+
+![Absttract Middleware](./diagrams/AbstractDocuments/AbstractMiddleware.png)
+
+## Repository
+
+![Abstract Repository](./diagrams/AbstractDocuments/AbstractRepository.png)
+
+## Entity
+
+![Abstract Entity](./diagrams/AbstractDocuments/AbstractEntity.png)
+
+## Dictionary
+
+![Abstract Dictionary](./diagrams/AbstractDocuments/AbstractDictionary.png)
+
+## Swagger
+
+![Abstract Swwagger](./diagrams/AbstractDocuments/AbstractSwagger.png)
+
+## AsyncApi
+
+## Validator
+
+![Abstract Validator](./diagrams/AbstractDocuments/AbstractValidator.png)
