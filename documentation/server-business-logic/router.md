@@ -1,6 +1,6 @@
 # Router
 
-Документ маршрутизатора відповідає за опису маршрутів конкретної колекції.
+Документ маршрутизатора `router` відповідає за опис маршрутів конкретної колекції.
 
 Загальний маршрут має наступний вигляд:
 
@@ -34,6 +34,7 @@ http://localhost:3000/SystemAdministrator/User/v1/signup
 
 При описі маршрутизатора `router` мінімальний набір даних маршруту складається з:
 - `path` - шляху маршруту.
+- `method` - HTTP метод, наприклад `post`, `get` чи ін.
 - `handler` - основного обробника, який необхідно створити в документі `Controller`.
 
 >[!ATTENTION]
@@ -90,4 +91,4 @@ class AuthRouter extends AbstractRouter implements IAbstractRouter {
 export default AuthRouter;
 ```
 
-Деталі реалізації абстрактного маршрутизатора дивись [AbstractRouter](../server-platform/abstract-documents.md#router).
+Деталі реалізації абстрактного маршрутизатора `abstract router` дивись [AbstractRouter](../server-platform/abstract-documents.md#router).
