@@ -99,4 +99,5 @@ class AuthSwagger extends AbstractSwagger {
 export default AuthSwagger;
 ```
 
-Деталі реалізації абстрактного документатора `abstract swagger` дивись [AbstractSwagger](../server-platform/abstract-documents.md#swagger)
+Деталі реалізації абстрактного документ
+атора `abstract swagger` дивись [AbstractSwagger](../server-platform/abstract-documents.md#swagger)
