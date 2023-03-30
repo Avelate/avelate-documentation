@@ -5,7 +5,7 @@
 > [!ATTENTION]
 > Кожний застосунок `application` повинен успадковуватись від абстрактного застосунку `abstract application`, завдяки чому застосунок буде включений в загальну схему бізнес-логіки.
 
-![AbstractApplication](./documents-png/AbstractApplication.svg)
+![AbstractApplicationList](./documents-png/AbstractApplication.svg)
 
 При створені застосунку необхідно описати сам застосунок:
 - `_APPLICATION_NAME` - вказати ім'я застосунку. Ім'я повинно бути унікальним в рамках всіх серверних застосунків.
@@ -49,16 +49,16 @@ class NinjaSushiApplication extends AbstractApplication implements IApplication 
   };
 
   constructor(
-    @inject(NinjaSushiSymbols.AuthCollector) private auth: IAbstractCollector,
-    @inject(NinjaSushiSymbols.UserCollector) private user: IAbstractCollector
+    @inject(NinjaSushiSymbols.AuthCollector) private _auth: IAbstractCollector,
+    @inject(NinjaSushiSymbols.UserCollector) private _user: IAbstractCollector
   ) {
     super();
   }
 
   protected _setCollections(): void {
     this._collections = new Set<IAbstractCollector>();
-    this._collections.add(this.auth);
-    this._collections.add(this.user);
+    this._collections.add(this._auth);
+    this._collections.add(this._user);
   }
 }
 
