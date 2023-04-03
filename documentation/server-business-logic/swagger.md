@@ -22,7 +22,7 @@ http://localhost:3000/api-documentation/SystemAdministrator
 > - надати одній компанії доступ до одни API, а других компанії надати доступ до других API. 
 > - зробити публічним API відповідного застосунку або групи затсосунків.
 
-![AdapterSwagger](./documents-png/AbstractSwagger.png)
+![AdapterSwagger](./documents-png/swagger.png)
 
 > [!ATTENTION]
 > Кожний документатор `swagger` повинен успадковуватись від абстрактного документатора `abstract swagger`, в іншому випадку опис API документації не буде включений в загальну схему API документації.

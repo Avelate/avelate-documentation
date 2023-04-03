@@ -5,7 +5,7 @@
 > [!ATTENTION]
 > Кожний застосунок `application` повинен успадковуватись від абстрактного застосунку `abstract application`, завдяки чому застосунок буде включений в загальну схему бізнес-логіки.
 
-![AbstractApplicationList](./documents-png/AbstractApplication.svg)
+![AbstractApplicationList](./documents-png/application.svg)
 
 При створені застосунку необхідно описати сам застосунок:
 - `_APPLICATION_NAME` - вказати ім'я застосунку. Ім'я повинно бути унікальним в рамках всіх серверних застосунків.

@@ -5,7 +5,7 @@
 >[!ATTENTION]
 > Якщо репозиторій `repository` не буде успадковуватись від абстрактного репозиторія `abstract repository`, то запити не зможуть звертатись до відповідної схеми сутності `entity`.
 
-![AbstractRepository](./documents-png/AbstractRepository.png)
+![AbstractRepository](./documents-png/repository.png)
 
 При описі репозиторія необхідно явно зазначити ідентичну назву схеми сутності `entity`, яка була визначена при створені документа схеми сутності. 
 

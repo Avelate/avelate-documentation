@@ -5,7 +5,7 @@
 > [!ATTENTION]
 > Якщо валідатор `validator` не буде успадковуватись від абстрактного валідатора `abstract validator`, то валідатор не зможе використовувати зашиті методи формування схем валідації, а отже буде неможливо створювати схеми валідації.
 
-![AbstractValidator](./documents-png/AbstractValidator.png)
+![AbstractValidator](./documents-png/validator.png)
 
 Схеми валідації також використовуються для опису тіла запиту, при описі `Swagger` API документації, яка створюється в документаторі `swagger`. 
 
