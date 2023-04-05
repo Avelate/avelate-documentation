@@ -28,6 +28,7 @@
     - [Абстрактні документи](server-platform/abstract-documents.md)
     - [Завантажувачі схеми](server-platform/schema-loader.md)
     - [Адаптери](server-platform/adapters.md)
+- [Ініціалізація та запуск](./config/configurations.md)
 - [Загальне]()
   - [Використані NPM пакети](./common/npm-package.md)
   - [Інверсія залежностей](./common/ioc.md)
