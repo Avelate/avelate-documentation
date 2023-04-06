@@ -11,7 +11,7 @@
 
 Кожний протокол працює на власному порту, який вказується в конфігураційному файлі `transport.json` та виконує лише одну функцію - створює веб-сервер відповідного порту.
 
-<<SCHEMA>>
+![Protocols](../server-platform/diagrams/protocol-adapters.svg)
 
 Приклад HTTP протоколу:
 
@@ -76,7 +76,7 @@ export default HttpProtocolAdapter;
 - створення незалежного виклику того чи іншого API маршруту.
 - та ін.
 
-<<<SCHEMA>>>
+![FrameworkAdapters](../server-platform/diagrams/framework-adapters.svg)
 
 Кожний адаптер фреймворку використовує змінні оточення, які описуються в конфігураційному файлі `business.json`.
 
