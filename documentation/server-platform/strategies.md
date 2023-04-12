@@ -31,10 +31,9 @@
 | Google Cloud Storage | google.cloud-storage.strategy.ts | Описує методи роботи з хмарним сховищем [Google Cloud Storage](https://www.npmjs.com/package/@google-cloud/storage) | 
 | Microsoft Azure Storage | azure.cloud-storage.strategy.ts |  Описує методи роботи з хмарним сховищем [Microsoft Asuze Storage](https://www.npmjs.com/package/@azure/storage-blob) | 
 
-
 За підключення чи відключення конкретного клієнта сервісу хмарного сховища відповідає хмарна фабрика `CloudStorageFactory`. Оскільки кількість фабрик відповідних стратегій може бути суттєва кількість, та не в кожному проекті буде потреба в тій чи іншій фабриці та відповідно в тій чи іншій стратегії, то робота з фабрика організована на рівні фасаду стратегій `StrategyFacade`.  
 
-![CLoudStrategies](../server-platform/diagrams/strategy-facade.svg)
+![CloudStrategies](../server-platform/diagrams/strategy-facade.svg)
 
 > [!TIP] 
 > Кожна стратегія наслідується від абстрактної стратегії хмарного сховища `abstract.cloud-storage.strategy.ts`, таким чином створюється:
